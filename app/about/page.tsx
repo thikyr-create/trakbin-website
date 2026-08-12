@@ -13,6 +13,16 @@ export default function AboutPage() {
         lead="Trakbin exists to connect the physical work of waste management to the data it generates." />
 
       <Section className="dot-grid-dark">
+        <Container className="max-w-4xl">
+          <SectionHead eyebrow="Why it matters"
+            title="Building the infrastructure for a more intelligent waste-management network." />
+          <p className="text-base leading-relaxed text-ink-700 sm:text-lg">
+            Waste management is one of the most visible infrastructure systems in every community, yet much of the work behind it remains fragmented, reactive, and difficult to measure. Very few people wake up excited about garbage. Yet every city, no matter how wealthy or advanced, depends on waste being removed efficiently.
+          </p>
+        </Container>
+      </Section>
+
+      <Section tone="tint">
         <Container className="grid gap-6 lg:grid-cols-2">
           {[{ t: "Mission", ...site.mission }, { t: "Vision", ...site.vision }].map((b) => (
             <div key={b.t} className="rounded-2xl border border-line bg-card p-8 card-shadow sm:p-10">
@@ -24,7 +34,7 @@ export default function AboutPage() {
         </Container>
       </Section>
 
-      <Section tone="tint">
+      <Section className="dot-grid-dark">
         <Container className="max-w-4xl">
           <SectionHead eyebrow="The story" title="Built upward from the street." />
           <div className="space-y-6 text-base leading-relaxed text-ink-700 sm:text-lg">
