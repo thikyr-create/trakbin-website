@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: var(--font-archivo), "Archivo", system-ui, sans-serif;
+  --font-body: var(--font-inter), "Inter", system-ui, sans-serif;
+  --font-mono: var(--font-jbm), "JetBrains Mono", ui-monospace, monospace;
+
+  --color-forest-950: #02120d;
+  --color-forest-900: #04231a;
+  --color-forest-800: #06382a;
+  --color-forest-700: #0a4f3a;
+  --color-forest-600: #0d6a4e;
+
+  --color-brand-600: #0a9e6c;
+  --color-brand-500: #10b981;
+  --color-brand-400: #34d399;
+  --color-brand-300: #6ee7b7;
+
+  --color-mint-200: #a7f3d0;
+  --color-mint-100: #d1fae5;
+  --color-mint-50: #ecfdf5;
+
+  --color-paper: #f2f5f3;
+  --color-card: #fbfcfb;
+  --color-line: #e2e8e4;
+
+  --color-ink-900: #0c1b15;
+  --color-ink-700: #27382f;
+  --color-ink-500: #55675d;
+}
+
+html { scroll-behavior: smooth; }
+::selection { background: var(--color-brand-400); color: var(--color-forest-950); }
+
+.dot-grid-light { background-image: radial-gradient(rgba(255,255,255,.14) 1px, transparent 1.4px); background-size: 26px 26px; }
+.dot-grid-dark  { background-image: radial-gradient(rgba(6,56,42,.09) 1px, transparent 1.4px); background-size: 26px 26px; }
+
+.eyebrow { font-family: var(--font-mono); font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: .3em; }
+
+.hero-gradient {
+  background:
+    radial-gradient(1100px 560px at 85% -10%, rgba(16,185,129,.22), transparent 60%),
+    radial-gradient(900px 500px at 8% 110%, rgba(16,185,129,.16), transparent 60%),
+    linear-gradient(135deg, #0a4f3a 0%, #06382a 45%, #04231a 100%);
+}
+
+.card-shadow { box-shadow: 0 1px 2px rgba(12,27,21,.05), 0 14px 34px -14px rgba(12,27,21,.14); }
