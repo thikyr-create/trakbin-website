@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import { dashboards, platformFeatures } from "@/content/platform";
+import { platformFeatures } from "@/content/platform";
 import { PageHero } from "@/components/shared/PageHero";
 import { Container, Section, SectionHead } from "@/components/shared/Section";
 import { FeatureGrid } from "@/components/shared/FeatureGrid";
-import { ScreenshotFrame } from "@/components/shared/ScreenshotFrame";
 import { ButtonLink } from "@/components/shared/Buttons";
 import { CTABand } from "@/components/shared/CTABand";
 
@@ -24,15 +23,6 @@ export default function PlatformPage() {
         <Container>
           <SectionHead eyebrow="Capabilities" title="Everything the operation needs. Nothing it doesn't." />
           <FeatureGrid items={platformFeatures} />
-        </Container>
-      </Section>
-
-      <Section tone="tint">
-        <Container>
-          <SectionHead center eyebrow="Command views" title="The same truth, seen from both sides." />
-          <div className="grid gap-10 lg:grid-cols-2">
-            {dashboards.map((d) => <ScreenshotFrame key={d.src} {...d} />)}
-          </div>
         </Container>
       </Section>
 

@@ -3,10 +3,9 @@ import { propertyFeatures } from "@/content/properties";
 import { PageHero } from "@/components/shared/PageHero";
 import { Container, Section, SectionHead } from "@/components/shared/Section";
 import { FeatureGrid } from "@/components/shared/FeatureGrid";
-import { ScreenshotFrame } from "@/components/shared/ScreenshotFrame";
 import { CTABand } from "@/components/shared/CTABand";
 
-export const metadata: Metadata = { title: "For Properties & Caretakers", description: "Collection schedules, service visibility, billing and communication for your buildings." };
+export const metadata: Metadata = { title: "For Properties", description: "Collection schedules, service visibility, billing and communication for your buildings." };
 
 export default function PropertiesPage() {
   return (
@@ -18,17 +17,6 @@ export default function PropertiesPage() {
         <Container>
           <SectionHead eyebrow="Service" title="Everything a property needs to know." />
           <FeatureGrid items={propertyFeatures} />
-        </Container>
-      </Section>
-
-      <Section tone="tint">
-        <Container className="grid items-center gap-12 lg:grid-cols-2">
-          <div>
-            <SectionHead eyebrow="Customer dashboard" title="Clarity for residents."
-              lead="Next pickup, schedule, billing and wallet, visible at a glance, settled automatically." />
-          </div>
-          <ScreenshotFrame src="/screenshots/customer-dashboard.png" label="Property · Dashboard"
-            caption="Customer dashboard" />
         </Container>
       </Section>
 

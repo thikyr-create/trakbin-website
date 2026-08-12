@@ -13,13 +13,13 @@ export const dashboards = [
   {
     src: "/screenshots/operator-console.png",
     label: "Operator · Command Deck",
-    caption: "Waste company dashboard",
+    caption: "waste company dashboard",
     detail: "Fleet standing, crew, buildings served, dispatch and treasury, the operator's live picture of the entire operation.",
   },
   {
     src: "/screenshots/customer-dashboard.png",
     label: "Property · Dashboard",
-    caption: "Customer dashboard",
+    caption: "customer dashboard",
     detail: "Schedules, billing, wallet and service status, the property's view of the same network.",
   },
 ];

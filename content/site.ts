@@ -16,8 +16,8 @@ export const site = {
   contact: {
     email: "pilot@trakbin.com",
     infoEmail: "info@trakbin.com",
-    phone: "+234 705 771 9950",
-    whatsapp: "2347057719950",
+    phone: "+234 705 771 9957",
+    whatsapp: "2347057719957",
   },
   socials: [
     { icon: "linkedin", label: "LinkedIn", href: "https://linkedin.com/company/trakbin" },
