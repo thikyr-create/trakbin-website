@@ -5,6 +5,7 @@ import { Container, Section, SectionHead } from "@/components/shared/Section";
 import { FeatureGrid } from "@/components/shared/FeatureGrid";
 import { Icon } from "@/components/shared/Icon";
 import { CTABand } from "@/components/shared/CTABand";
+import { MotionCard } from "@/components/shared/MotionCard";
 
 export const metadata: Metadata = { title: "For Waste Agencies & Regulators", description: "Geographic visibility, service coverage and operational intelligence across the waste system." };
 
@@ -23,25 +24,27 @@ export default function AgenciesPage() {
 
       <Section tone="tint">
         <Container className="max-w-4xl">
-          <div className="rounded-2xl border border-line bg-card p-8 card-shadow sm:p-10">
-            <p className="eyebrow text-brand-600">On the roadmap</p>
-            <h2 className="mt-4 font-display text-2xl font-black tracking-tight text-ink-900 sm:text-3xl">
-              We only promise what we've deployed.
-            </h2>
-            <p className="mt-4 text-ink-500">
-              These capabilities are in active design and pilot, not marketing fiction:
-            </p>
-            <ul className="mt-6 space-y-4">
-              {roadmap.map((r) => (
-                <li key={r} className="flex items-start gap-3 text-ink-700">
-                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-mint-100 text-forest-700">
-                    <Icon name="clock" className="h-3.5 w-3.5" />
-                  </span>
-                  <span className="text-sm leading-relaxed sm:text-base">{r}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <MotionCard>
+            <div className="rounded-2xl border border-line bg-card p-8 card-shadow sm:p-10">
+              <p className="eyebrow text-brand-600">On the roadmap</p>
+              <h2 className="mt-4 font-display text-2xl font-black tracking-tight text-ink-900 sm:text-3xl">
+                We only promise what we've deployed.
+              </h2>
+              <p className="mt-4 text-ink-500">
+                These capabilities are in active design and pilot, not marketing fiction:
+              </p>
+              <ul className="mt-6 space-y-4">
+                {roadmap.map((r) => (
+                  <li key={r} className="flex items-start gap-3 text-ink-700">
+                    <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-mint-100 text-forest-700">
+                      <Icon name="clock" className="h-3.5 w-3.5" />
+                    </span>
+                    <span className="text-sm leading-relaxed sm:text-base">{r}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </MotionCard>
         </Container>
       </Section>
 

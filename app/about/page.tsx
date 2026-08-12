@@ -3,6 +3,7 @@ import { site } from "@/content/site";
 import { PageHero } from "@/components/shared/PageHero";
 import { Container, Section, SectionHead } from "@/components/shared/Section";
 import { CTABand } from "@/components/shared/CTABand";
+import { MotionCard } from "@/components/shared/MotionCard";
 
 export const metadata: Metadata = { title: "About", description: "Building cities, not trucks." };
 
@@ -23,12 +24,14 @@ export default function AboutPage() {
 
       <Section tone="tint">
         <Container className="grid gap-6 lg:grid-cols-2">
-          {[{ t: "Mission", ...site.mission }, { t: "Vision", ...site.vision }].map((b) => (
-            <div key={b.t} className="rounded-2xl border border-line bg-card p-8 card-shadow sm:p-10">
-              <p className="eyebrow text-brand-600">{b.t}</p>
-              <p className="mt-4 font-display text-xl font-bold leading-snug text-ink-900 sm:text-2xl">{b.body}</p>
-              <p className="mt-4 text-sm leading-relaxed text-ink-500 sm:text-base">{b.support}</p>
-            </div>
+          {[{ t: "Mission", ...site.mission }, { t: "Vision", ...site.vision }].map((b, i) => (
+            <MotionCard key={b.t} delay={i * 0.12} className="h-full">
+              <div className="h-full rounded-2xl border border-line bg-card p-8 card-shadow sm:p-10">
+                <p className="eyebrow text-brand-600">{b.t}</p>
+                <p className="mt-4 font-display text-xl font-bold leading-snug text-ink-900 sm:text-2xl">{b.body}</p>
+                <p className="mt-4 text-sm leading-relaxed text-ink-500 sm:text-base">{b.support}</p>
+              </div>
+            </MotionCard>
           ))}
         </Container>
       </Section>
