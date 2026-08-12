@@ -9,8 +9,7 @@ export const metadata: Metadata = { title: "About", description: "Building citie
 export default function AboutPage() {
   return (
     <>
-      <PageHero eyebrow="About" title="Building cities, not trucks."
-        lead="Trakbin exists to connect the physical work of waste management to the data it generates." />
+      <PageHero eyebrow="About" title="Building cities, not trucks." />
 
       <Section className="dot-grid-dark">
         <Container className="max-w-4xl">
