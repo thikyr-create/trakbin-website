@@ -4,7 +4,7 @@ import { Icon } from "@/components/shared/Icon";
 
 const audiences = [
   { href: "/waste-operators", icon: "truck", title: "For Waste Operators", detail: "Run fleets, crews, zones, dispatch and billing as one live system.", cta: "Modernize your operations" },
-  { href: "/properties", icon: "building", title: "For Properties & Caretakers", detail: "Schedules, service visibility, billing and communication for your buildings.", cta: "Bring your property into the network" },
+  { href: "/properties", icon: "building", title: "For Properties", detail: "Schedules, service visibility, billing and communication for your buildings.", cta: "Bring your property into the network" },
   { href: "/agencies-regulators", icon: "shield", title: "For Waste Agencies & Regulators", detail: "Geographic visibility and operational intelligence across the whole system.", cta: "See regulatory visibility" },
 ];
 

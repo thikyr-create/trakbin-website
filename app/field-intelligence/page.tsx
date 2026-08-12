@@ -12,7 +12,7 @@ export default function FieldIntelligencePage() {
   return (
     <>
       <PageHero eyebrow="Field intelligence" title="Every collection creates intelligence."
-        lead="Trakbin turns real-world collection activity—movement, confirmations, observations—into structured operational intelligence." />
+        lead="Trakbin turns real-world collection activity, movement, confirmations, observations, into structured operational intelligence." />
 
       <Section className="dot-grid-dark">
         <Container>

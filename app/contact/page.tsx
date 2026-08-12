@@ -8,9 +8,10 @@ import { PilotForm } from "@/components/contact/PilotForm";
 export const metadata: Metadata = { title: "Contact", description: "Let's build better waste operations." };
 
 const channels = [
-  { icon: "mail", label: "Email", value: site.contact.email, href: `mailto:${site.contact.email}` },
+  { icon: "mail", label: "Pilot inquiries", value: site.contact.email, href: `mailto:${site.contact.email}` },
+  { icon: "mail", label: "Information", value: site.contact.infoEmail, href: `mailto:${site.contact.infoEmail}` },
   { icon: "phone", label: "Phone", value: site.contact.phone, href: `tel:${site.contact.phone.replace(/\s/g, "")}` },
-  { icon: "message", label: "WhatsApp", value: "Chat with us", href: `https://wa.me/${site.contact.whatsapp}` },
+  { icon: "message", label: "WhatsApp", value: site.contact.phone, href: `https://wa.me/${site.contact.whatsapp}` },
 ];
 
 export default function ContactPage() {

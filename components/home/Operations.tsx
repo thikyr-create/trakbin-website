@@ -2,7 +2,7 @@ import { Container, Section, SectionHead } from "@/components/shared/Section";
 
 const photos = [
   { src: "/photos/crew.jpg", label: "01", title: "Collection crews", detail: "Field teams executing confirmed pickups." },
-  { src: "/photos/fleet.jpg", label: "02", title: "Mixed fleet", detail: "From rear-loaders to compact carts—matched to the zone." },
+  { src: "/photos/fleet.jpg", label: "02", title: "Mixed fleet", detail: "From rear-loaders to compact carts, matched to the zone." },
   { src: "/photos/bins.jpg", label: "03", title: "Standardized containers", detail: "Every bin size and type, registered and trackable." },
   { src: "/photos/tools.jpg", label: "04", title: "Field tools", detail: "The instruments that turn fieldwork into data." },
 ];
@@ -12,7 +12,7 @@ export function Operations() {
     <Section className="dot-grid-dark">
       <Container>
         <SectionHead eyebrow="Built for the field" title="Built with operators. Tested in the field."
-          lead="No stock promises. Real mapping work, real interfaces, real deployments—and pilots measured from day one." />
+          lead="No stock promises. Real mapping work, real interfaces, real deployments, and pilots measured from day one." />
         <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
           {photos.map((p) => (
             <figure key={p.src} className="group overflow-hidden rounded-2xl border border-line bg-card card-shadow">

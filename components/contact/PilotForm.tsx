@@ -12,7 +12,7 @@ export function PilotForm() {
 
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent(`Pilot request — ${v.org || v.name}`);
+    const subject = encodeURIComponent(`Pilot request, ${v.org || v.name}`);
     const body = encodeURIComponent(`Name: ${v.name}\nOrganization: ${v.org}\nEmail: ${v.email}\n\n${v.message}`);
     window.location.href = `mailto:${site.contact.email}?subject=${subject}&body=${body}`;
   };
@@ -37,7 +37,7 @@ export function PilotForm() {
       </div>
       <div className="mt-5">
         <label className={label} htmlFor="message">What do you operate or manage?</label>
-        <textarea id="message" rows={5} required className={input} value={v.message} onChange={set("message")} placeholder="Fleet size, buildings, zones, current process…" />
+        <textarea id="message" rows={5} required className={input} value={v.message} onChange={set("message")} placeholder="Fleet size, buildings, zones, current process..." />
       </div>
       <button type="submit"
         className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-500 px-6 py-4 font-mono text-xs font-semibold uppercase tracking-[.2em] text-forest-950 transition hover:bg-brand-400 sm:w-auto">

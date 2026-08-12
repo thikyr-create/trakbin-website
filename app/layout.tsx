@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600"], variabl
 const jbm = JetBrains_Mono({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--font-jbm", display: "swap" });
 
 export const metadata: Metadata = {
-  title: { default: "Trakbin — The digital infrastructure for modern waste management", template: "%s · Trakbin" },
+  title: { default: "Trakbin ,  The digital infrastructure for modern waste management", template: "%s · Trakbin" },
   description: "Trakbin connects properties, waste operators, businesses and waste agencies through one intelligent operational system.",
   openGraph: { title: "Trakbin", description: "Building cities, not trucks. The digital infrastructure for modern waste management.", images: ["/og/home.png"] },
 };

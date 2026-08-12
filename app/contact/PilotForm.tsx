@@ -12,7 +12,7 @@ export function PilotForm() {
 
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent(`Pilot request — ${v.org || v.name}`);
+    const subject = encodeURIComponent(`Pilot request ,  ${v.org || v.name}`);
     const body = encodeURIComponent(`Name: ${v.name}\nOrganization: ${v.org}\nEmail: ${v.email}\n\n${v.message}`);
     window.location.href = `mailto:${site.contact.email}?subject=${subject}&body=${body}`;
   };

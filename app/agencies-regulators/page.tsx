@@ -29,7 +29,7 @@ export default function AgenciesPage() {
               We only promise what we've deployed.
             </h2>
             <p className="mt-4 text-ink-500">
-              These capabilities are in active design and pilot—not marketing fiction:
+              These capabilities are in active design and pilot, not marketing fiction:
             </p>
             <ul className="mt-6 space-y-4">
               {roadmap.map((r) => (

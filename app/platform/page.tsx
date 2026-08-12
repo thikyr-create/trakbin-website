@@ -13,7 +13,7 @@ export default function PlatformPage() {
   return (
     <>
       <PageHero eyebrow="The platform" title="One intelligent operational system for the entire waste chain."
-        lead="Collection, routing, billing and field intelligence—unified in a single platform shared by properties, operators and agencies.">
+        lead="Collection, routing, billing and field intelligence, unified in a single platform shared by properties, operators and agencies.">
         <div className="mt-9 flex flex-wrap gap-4">
           <ButtonLink href="/contact">Request a Pilot</ButtonLink>
           <ButtonLink href="/field-intelligence" variant="ghost-dark">Explore Field Intelligence</ButtonLink>
@@ -37,7 +37,7 @@ export default function PlatformPage() {
       </Section>
 
       <CTABand title="See it running on your own routes."
-        lead="A pilot deploys Trakbin on a real zone with a real operator—measured from day one." />
+        lead="A pilot deploys Trakbin on a real zone with a real operator, measured from day one." />
     </>
   );
 }
