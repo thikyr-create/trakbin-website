@@ -1,17 +1,22 @@
 import type { Metadata } from "next";
+import { SITE_URL, PAGES } from "@/content/seo";
 import { site } from "@/content/site";
 import { PageHero } from "@/components/shared/PageHero";
 import { Container, Section, SectionHead } from "@/components/shared/Section";
 import { CTABand } from "@/components/shared/CTABand";
 import { MotionCard } from "@/components/shared/MotionCard";
 
-export const metadata: Metadata = { title: "About", description: "Building cities, not trucks." };
+const p = PAGES.find((x) => x.path === "/about")!;
+export const metadata: Metadata = {
+  title: p.title, description: p.description, alternates: { canonical: p.path },
+  openGraph: { title: p.title, description: p.description, url: `${SITE_URL}${p.path}`, images: [{ url: "/og/home.png", width: 1200, height: 630, alt: "Trakbin" }] },
+  twitter: { card: "summary_large_image", title: p.title, description: p.description, images: ["/og/home.png"] },
+};
 
 export default function AboutPage() {
   return (
     <>
       <PageHero eyebrow="About" title="Building cities, not trucks." />
-
       <Section className="dot-grid-dark">
         <Container className="max-w-4xl">
           <SectionHead eyebrow="Why it matters"
@@ -21,7 +26,6 @@ export default function AboutPage() {
           </p>
         </Container>
       </Section>
-
       <Section tone="tint">
         <Container className="grid gap-6 lg:grid-cols-2">
           {[{ t: "Mission", ...site.mission }, { t: "Vision", ...site.vision }].map((b, i) => (
@@ -35,7 +39,6 @@ export default function AboutPage() {
           ))}
         </Container>
       </Section>
-
       <Section className="dot-grid-dark">
         <Container className="max-w-4xl">
           <SectionHead eyebrow="The story" title="Built upward from the street." />
@@ -46,7 +49,6 @@ export default function AboutPage() {
           </div>
         </Container>
       </Section>
-
       <CTABand title="Be part of the infrastructure."
         lead="Operators, properties and agencies building the connected waste system, start with a pilot." />
     </>

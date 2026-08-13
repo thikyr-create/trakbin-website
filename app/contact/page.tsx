@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SITE_URL, PAGES } from "@/content/seo";
 import { site } from "@/content/site";
 import { PageHero } from "@/components/shared/PageHero";
 import { Container, Section } from "@/components/shared/Section";
@@ -6,7 +7,12 @@ import { Icon } from "@/components/shared/Icon";
 import { MotionCard } from "@/components/shared/MotionCard";
 import { PilotForm } from "@/components/contact/PilotForm";
 
-export const metadata: Metadata = { title: "Contact", description: "Let's build better waste operations." };
+const p = PAGES.find((x) => x.path === "/contact")!;
+export const metadata: Metadata = {
+  title: p.title, description: p.description, alternates: { canonical: p.path },
+  openGraph: { title: p.title, description: p.description, url: `${SITE_URL}${p.path}`, images: [{ url: "/og/home.png", width: 1200, height: 630, alt: "Trakbin" }] },
+  twitter: { card: "summary_large_image", title: p.title, description: p.description, images: ["/og/home.png"] },
+};
 
 const channels = [
   { icon: "mail", label: "Pilot inquiries", value: site.contact.email, href: `mailto:${site.contact.email}` },
@@ -20,13 +26,11 @@ export default function ContactPage() {
     <>
       <PageHero eyebrow="Contact" title="Let's build better waste operations."
         lead="Interested in deploying Trakbin? Start with a pilot." />
-
       <Section className="dot-grid-dark">
         <Container className="grid gap-12 lg:grid-cols-[1.2fr_1fr]">
           <MotionCard>
             <PilotForm />
           </MotionCard>
-
           <aside className="space-y-4">
             {channels.map((c, i) => (
               <MotionCard key={c.label} delay={0.1 + i * 0.08} hover>
@@ -42,7 +46,6 @@ export default function ContactPage() {
                 </a>
               </MotionCard>
             ))}
-
             <MotionCard delay={0.1 + channels.length * 0.08}>
               <div className="rounded-2xl border border-line bg-card p-5 card-shadow">
                 <p className="eyebrow text-ink-500">Follow</p>

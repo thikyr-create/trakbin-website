@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SITE_URL, PAGES } from "@/content/seo";
 import { platformFeatures } from "@/content/platform";
 import { PageHero } from "@/components/shared/PageHero";
 import { Container, Section, SectionHead } from "@/components/shared/Section";
@@ -6,7 +7,12 @@ import { FeatureGrid } from "@/components/shared/FeatureGrid";
 import { ButtonLink } from "@/components/shared/Buttons";
 import { CTABand } from "@/components/shared/CTABand";
 
-export const metadata: Metadata = { title: "Platform", description: "One intelligent operational system for the entire waste chain." };
+const p = PAGES.find((x) => x.path === "/platform")!;
+export const metadata: Metadata = {
+  title: p.title, description: p.description, alternates: { canonical: p.path },
+  openGraph: { title: p.title, description: p.description, url: `${SITE_URL}${p.path}`, images: [{ url: "/og/home.png", width: 1200, height: 630, alt: "Trakbin" }] },
+  twitter: { card: "summary_large_image", title: p.title, description: p.description, images: ["/og/home.png"] },
+};
 
 export default function PlatformPage() {
   return (
@@ -18,14 +24,12 @@ export default function PlatformPage() {
           <ButtonLink href="/field-intelligence" variant="ghost-dark">Explore Field Intelligence</ButtonLink>
         </div>
       </PageHero>
-
       <Section className="dot-grid-dark">
         <Container>
           <SectionHead eyebrow="Capabilities" title="Everything the operation needs. Nothing it doesn't." />
           <FeatureGrid items={platformFeatures} />
         </Container>
       </Section>
-
       <CTABand title="See it running on your own routes."
         lead="A pilot deploys Trakbin on a real zone with a real operator, measured from day one." />
     </>

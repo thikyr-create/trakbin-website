@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SITE_URL, PAGES } from "@/content/seo";
 import { agencyCapabilities, roadmap } from "@/content/agencies";
 import { PageHero } from "@/components/shared/PageHero";
 import { Container, Section, SectionHead } from "@/components/shared/Section";
@@ -7,21 +8,24 @@ import { Icon } from "@/components/shared/Icon";
 import { CTABand } from "@/components/shared/CTABand";
 import { MotionCard } from "@/components/shared/MotionCard";
 
-export const metadata: Metadata = { title: "For Waste Agencies & Regulators", description: "Geographic visibility, service coverage and operational intelligence across the waste system." };
+const p = PAGES.find((x) => x.path === "/agencies-regulators")!;
+export const metadata: Metadata = {
+  title: p.title, description: p.description, alternates: { canonical: p.path },
+  openGraph: { title: p.title, description: p.description, url: `${SITE_URL}${p.path}`, images: [{ url: "/og/home.png", width: 1200, height: 630, alt: "Trakbin" }] },
+  twitter: { card: "summary_large_image", title: p.title, description: p.description, images: ["/og/home.png"] },
+};
 
 export default function AgenciesPage() {
   return (
     <>
       <PageHero eyebrow="For waste agencies & regulators" title="Oversight built on evidence, not anecdotes."
         lead="Geographic visibility, service coverage and operational intelligence across the waste system you regulate." />
-
       <Section className="dot-grid-dark">
         <Container>
           <SectionHead eyebrow="Oversight" title="See the system the way it actually runs." />
           <FeatureGrid items={agencyCapabilities} />
         </Container>
       </Section>
-
       <Section tone="tint">
         <Container className="max-w-4xl">
           <MotionCard>
@@ -47,7 +51,6 @@ export default function AgenciesPage() {
           </MotionCard>
         </Container>
       </Section>
-
       <CTABand title="Partner on the infrastructure layer."
         lead="Work with Trakbin to bring measurable, connected waste operations to your jurisdiction." primaryLabel="Talk to Trakbin" />
     </>
