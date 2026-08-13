@@ -5,6 +5,7 @@ import { PageHero } from "@/components/shared/PageHero";
 import { Container, Section, SectionHead } from "@/components/shared/Section";
 import { CTABand } from "@/components/shared/CTABand";
 import { MotionCard } from "@/components/shared/MotionCard";
+import { ParallaxImage } from "@/components/animations/ParallaxImage";
 
 const p = PAGES.find((x) => x.path === "/about")!;
 export const metadata: Metadata = {
@@ -17,6 +18,7 @@ export default function AboutPage() {
   return (
     <>
       <PageHero eyebrow="About" title="Building cities, not trucks." />
+
       <Section className="dot-grid-dark">
         <Container className="max-w-4xl">
           <SectionHead eyebrow="Why it matters"
@@ -26,6 +28,7 @@ export default function AboutPage() {
           </p>
         </Container>
       </Section>
+
       <Section tone="tint">
         <Container className="grid gap-6 lg:grid-cols-2">
           {[{ t: "Mission", ...site.mission }, { t: "Vision", ...site.vision }].map((b, i) => (
@@ -39,6 +42,7 @@ export default function AboutPage() {
           ))}
         </Container>
       </Section>
+
       <Section className="dot-grid-dark">
         <Container className="max-w-4xl">
           <SectionHead eyebrow="The story" title="Built upward from the street." />
@@ -47,8 +51,11 @@ export default function AboutPage() {
             <p>We started where the work happens, mapping zones, riding with crews, measuring real collection activity, and built upward from that reality. Not from a pitch deck.</p>
             <p>Today Trakbin connects properties, waste operators, drivers and agencies into one operational network, turning everyday collection activity into intelligence that improves how cities manage waste.</p>
           </div>
+                    <ParallaxImage src="/photos/a20.jpeg" alt="Trakbin field team at work"
+            className="mt-12 aspect-[21/9] rounded-2xl border border-line card-shadow" />
         </Container>
       </Section>
+
       <CTABand title="Be part of the infrastructure."
         lead="Operators, properties and agencies building the connected waste system, start with a pilot." />
     </>
