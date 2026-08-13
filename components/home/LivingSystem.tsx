@@ -4,11 +4,11 @@ import { ImageCrossfade } from "@/components/animations/ImageCrossfade";
 import type { Frame } from "@/components/animations/ImageCrossfade";
 
 const frames: Frame[] = [
-  { src: "/photos/collection.jpg", alt: "Crew loading collections onto a truck", caption: "Physical world" },
-  { src: "/screenshots/operator-console.png", alt: "Trakbin operator command deck", caption: "Trakbin" },
-  { src: "/photos/street.jpg", alt: "Street-level collection operation", caption: "Physical world" },
-  { src: "/screenshots/customer-dashboard.png", alt: "Trakbin property dashboard", caption: "Data" },
-  { src: "/photos/crew.jpg", alt: "Field team at a recycling facility", caption: "Physical world" },
+  { src: "/photos/a1.jpeg", alt: "Trakbin field operations" },
+  { src: "/photos/a6.jpeg", alt: "Trakbin route execution" },
+  { src: "/photos/a10.jpeg", alt: "Trakbin collection in progress" },
+  { src: "/photos/a5.jpeg", alt: "Trakbin crew on site" },
+  { src: "/photos/a9.jpeg", alt: "Trakbin standardized containers" },
 ];
 
 export function LivingSystem() {
