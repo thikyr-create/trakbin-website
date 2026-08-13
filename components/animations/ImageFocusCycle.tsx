@@ -30,7 +30,7 @@ export function ImageFocusCycle({ frames, interval = 3000, className, showDots =
   }, [reduce, frames.length, interval, inView, i, controlled]);
 
   return (
-    <div ref={ref} className={cn("relative overflow-hidden bg-forest-900", className)}>
+    <div ref={ref} className={cn("overflow-hidden bg-forest-900", className)}>
       <AnimatePresence initial={false}>
         <motion.div
           key={frame.src}
