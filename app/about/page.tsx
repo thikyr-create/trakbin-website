@@ -51,7 +51,7 @@ export default function AboutPage() {
             <p>We started where the work happens, mapping zones, riding with crews, measuring real collection activity, and built upward from that reality. Not from a pitch deck.</p>
             <p>Today Trakbin connects properties, waste operators, drivers and agencies into one operational network, turning everyday collection activity into intelligence that improves how cities manage waste.</p>
           </div>
-                    <ParallaxImage src="/photos/a20.jpeg" alt="Trakbin field team at work"
+                    <ParallaxImage src="/photos/a21.jpeg" alt="Trakbin field team at work"
             className="mt-12 aspect-[21/9] rounded-2xl border border-line card-shadow" />
         </Container>
       </Section>
