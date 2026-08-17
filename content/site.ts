@@ -1,6 +1,6 @@
 export const site = {
   name: "TRAKBIN",
-    tagline: "Building cities, not waste",
+    tagline: "Building cities not waste",
   hero: {
     headline: "The digital infrastructure for modern waste management.",
     sub: "Trakbin connects properties, waste operators, businesses and waste agencies through one intelligent operational system, bringing collection, routing, field intelligence and environmental visibility into a single platform.",

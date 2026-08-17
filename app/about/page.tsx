@@ -17,8 +17,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <PageHero eyebrow="About" title="Building cities, not trucks." />
-
+            <PageHero eyebrow="About" title={`${site.tagline}.`} />
       <Section className="dot-grid-dark">
         <Container className="max-w-4xl">
           <SectionHead eyebrow="Why it matters"
