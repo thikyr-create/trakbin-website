@@ -8,6 +8,7 @@ import { Footer } from "@/components/footer/Footer";
 import { MotionProvider } from "@/components/shared/MotionProvider";
 import { SITE_URL, ORG, PAGES } from "@/content/seo";
 import type { WithContext, Organization } from "schema-dts";
+import { CookieBanner } from "@/components/consent/CookieBanner";
 
 const archivo = Archivo({ subsets: ["latin"], weight: ["600", "700", "800", "900"], variable: "--font-archivo", display: "swap" });
 const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--font-inter", display: "swap" });
@@ -69,6 +70,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </MotionProvider>
         <Analytics />
                 <SpeedInsights />
+                <CookieBanner />
       </body>
     </html>
   );

@@ -25,4 +25,5 @@ export const PAGES: PageDef[] = [
   { path: "/field-intelligence", title: "Field Intelligence — Every collection creates intelligence · Trakbin", description: "Trakbin turns real-world collection activity into structured, confidence-scored operational intelligence." },
   { path: "/about", title: "About — Building cities, not trucks · Trakbin", description: "Trakbin connects the physical work of waste management to the data it generates." },
   { path: "/contact", title: "Request a Pilot — Trakbin", description: "Deploy Trakbin on a real zone. Start with a pilot, measure everything, build from real operations." },
+     { path: "/privacy", title: "Privacy & Cookie Policy - Trakbin", description: "Learn how we handle your data." },
 ];
