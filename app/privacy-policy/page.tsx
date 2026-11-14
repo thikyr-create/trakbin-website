@@ -3,7 +3,7 @@ import { SITE_URL, PAGES } from "@/content/seo";
 import { PageHero } from "@/components/shared/PageHero";
 import { Container, Section } from "@/components/shared/Section";
 
-const p = PAGES.find((x) => x.path === "/privacy")!;
+const p = PAGES.find((x) => x.path === "/privacy-policy")!;
 export const metadata: Metadata = {
   title: p.title,
   description: p.description,

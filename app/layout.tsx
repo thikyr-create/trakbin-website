@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { Archivo, Inter, JetBrains_Mono } from "next/font/google";
-import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import { Navbar } from "@/components/navigation/Navbar";
 import { Footer } from "@/components/footer/Footer";
 import { MotionProvider } from "@/components/shared/MotionProvider";
 import { SITE_URL, ORG, PAGES } from "@/content/seo";
 import type { WithContext, Organization } from "schema-dts";
+import { ConsentProvider } from "@/components/consent/ConsentProvider";
+import { AnalyticsTracker } from "@/components/consent/AnalyticsTracker";
 import { CookieBanner } from "@/components/consent/CookieBanner";
 
 const archivo = Archivo({ subsets: ["latin"], weight: ["600", "700", "800", "900"], variable: "--font-archivo", display: "swap" });
@@ -63,14 +63,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
         />
-        <MotionProvider>
-          <Navbar />
-          {children}
-          <Footer />
-        </MotionProvider>
-        <Analytics />
-                <SpeedInsights />
-                <CookieBanner />
+        <ConsentProvider>
+          <MotionProvider>
+            <Navbar />
+            {children}
+            <Footer />
+          </MotionProvider>
+          <AnalyticsTracker />
+          <CookieBanner />
+        </ConsentProvider>
       </body>
     </html>
   );

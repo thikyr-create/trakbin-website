@@ -25,6 +25,7 @@ export const PAGES: PageDef[] = [
   { path: "/field-intelligence", title: "Field Intelligence — Every collection creates intelligence · Trakbin", description: "Trakbin turns real-world collection activity into structured, confidence-scored operational intelligence." },
   { path: "/about", title: "About — Building cities, not trucks · Trakbin", description: "Trakbin connects the physical work of waste management to the data it generates." },
   { path: "/contact", title: "Request a Pilot — Trakbin", description: "Deploy Trakbin on a real zone. Start with a pilot, measure everything, build from real operations." },
-     { path: "/privacy", title: "Privacy & Cookie Policy - Trakbin", description: "Learn how we handle your data." },
-       { path: "/terms-of-service", title: "Terms of Service - Trakbin", description: "The terms governing access to and use of the Trakbin ecosystem, operated by A.G.W.U TECHNOLOGY LTD (RC 8916517)." },
+     { path: "/privacy-policy", title: "Privacy & Cookie Policy - Trakbin", description: "Learn how we handle your data." },
+       { path: "/terms-of-service", title: "Terms of Service - Trakbin", description: "The terms governing access to and use of the Trakbin ecosystem, operated by A.G.W.U TECHNOLOGY LTD." },
+       { path: "/cookie-policy", title: "Cookie Policy - Trakbin", description: "How Trakbin uses cookies and similar technologies." }
 ];

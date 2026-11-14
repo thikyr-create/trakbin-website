@@ -2,6 +2,7 @@ import Link from "next/link";
 import { site } from "@/content/site";
 import { Container } from "@/components/shared/Section";
 import { Icon } from "@/components/shared/Icon";
+import { CookiePreferencesTrigger } from "@/components/footer/CookiePreferencesTrigger";
 
 const cols = [
   { title: "Platform", links: [
@@ -53,17 +54,17 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-14 flex flex-col gap-3 border-t border-white/10 pt-6 sm:flex-row sm:justify-between">
+        <div className="mt-14 flex flex-col gap-3 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex flex-wrap items-center gap-4">
             <p className="font-mono text-[11px] uppercase tracking-[.2em] text-white/40">© {new Date().getFullYear()} Trakbin</p>
-            <Link href="/privacy" className="font-mono text-[11px] uppercase tracking-[.2em] text-white/40 transition hover:text-white">
-              Privacy & Cookies
+            <Link href="/privacy-policy" className="font-mono text-[11px] uppercase tracking-[.2em] text-white/40 transition hover:text-white">
+              Privacy Policy
             </Link>
-            <Link href="/terms-of-service" className="font-mono text-[11px] uppercase tracking-[.2em] text-white/40 transition hover:text-white">
-              Terms of Service
+            <Link href="/cookie-policy" className="font-mono text-[11px] uppercase tracking-[.2em] text-white/40 transition hover:text-white">
+              Cookie Policy
             </Link>
           </div>
-          <p className="font-mono text-[11px] uppercase tracking-[.2em] text-white/40">Digital infrastructure for modern waste management</p>
+          <CookiePreferencesTrigger />
         </div>
       </Container>
     </footer>
