@@ -9,6 +9,7 @@ const nextConfig: NextConfig = {
       { source: "/solutions/:path*", destination: "/platform", permanent: true },
       { source: "/agencies", destination: "/agencies-regulators", permanent: true },
       { source: "/request-a-pilot", destination: "/contact", permanent: true },
+            { source: "/privacy-policy", destination: "/privacy", permanent: true },
     ];
   },
 };

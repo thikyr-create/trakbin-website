@@ -54,10 +54,13 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-14 flex flex-col gap-3 border-t border-white/10 pt-6 sm:flex-row sm:justify-between">
-          <div className="flex items-center gap-4">
+          <div className="flex flex-wrap items-center gap-4">
             <p className="font-mono text-[11px] uppercase tracking-[.2em] text-white/40">© {new Date().getFullYear()} Trakbin</p>
             <Link href="/privacy" className="font-mono text-[11px] uppercase tracking-[.2em] text-white/40 transition hover:text-white">
               Privacy & Cookies
+            </Link>
+            <Link href="/terms-of-service" className="font-mono text-[11px] uppercase tracking-[.2em] text-white/40 transition hover:text-white">
+              Terms of Service
             </Link>
           </div>
           <p className="font-mono text-[11px] uppercase tracking-[.2em] text-white/40">Digital infrastructure for modern waste management</p>
