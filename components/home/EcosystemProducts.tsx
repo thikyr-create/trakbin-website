@@ -71,7 +71,7 @@ export function EcosystemProducts() {
   return (
     <Section className="bg-paper relative">
       <Container>
-        <SectionHead center eyebrow="The Trakbin Ecosystem" title="the Digital infrastructure for modern waste management and environmental services."
+        <SectionHead center eyebrow="The Trakbin Ecosystem" title="the digital infrastructure for modern waste management and environmental services."
           lead="Trakbin brings different parts of the waste management and environmental services industry into one connected technology network. Each product serves a specific operational purpose while contributing to a wider system of connected services and information." />
 
         <div className="relative mt-12">
