@@ -1,6 +1,4 @@
 import { site } from "@/content/site";
-import { ButtonLink } from "@/components/shared/Buttons";
-import { Icon } from "@/components/shared/Icon";
 
 export function Hero() {
   return (
@@ -18,15 +16,11 @@ export function Hero() {
         <path id="heroRoute"
           d="M-60 880C260 700 380 560 620 470 860 380 1040 300 1240 210c120-54 200-90 280-130"
           stroke="#6ee7b7" strokeOpacity=".28" strokeWidth="2" strokeDasharray="1 12" strokeLinecap="round" />
-
-        {/* travelling dot */}
         <circle className="hero-dot-move" cx="0" cy="0" r="6" fill="#34d399" fillOpacity=".85">
           <animateMotion dur="9s" repeatCount="indefinite">
             <mpath href="#heroRoute" />
           </animateMotion>
         </circle>
-
-        {/* static fallback for reduced motion */}
         <circle className="hero-dot-static" cx="1125" cy="255" r="7" fill="#34d399" fillOpacity=".5" />
       </svg>
 
@@ -43,25 +37,6 @@ export function Hero() {
         <p className="mt-10 font-mono text-sm font-semibold uppercase tracking-[.2em] text-brand-300">
           One ecosystem. Connected operations. Better-managed communities.
         </p>
-
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-          <a
-            href="https://play.google.com/store/apps/details?id=com.trakbin&pcampaignid=web_share"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-brand-500 px-8 py-4 font-mono text-sm font-semibold uppercase tracking-[.15em] text-forest-950 transition hover:bg-brand-400"
-          >
-            <Icon name="play" className="h-4 w-4" />
-            Play Store
-          </a>
-
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/20 px-8 py-4 font-mono text-sm font-semibold uppercase tracking-[.15em] text-white/50 cursor-not-allowed">
-            <Icon name="apple" className="h-4 w-4" />
-            iOS Coming Soon
-          </div>
-
-          <ButtonLink href="/platform" variant="ghost-dark">Explore the Platform</ButtonLink>
-        </div>
       </div>
     </section>
   );
