@@ -45,3 +45,29 @@ html { scroll-behavior: smooth; }
 }
 
 .card-shadow { box-shadow: 0 1px 2px rgba(12,27,21,.05), 0 14px 34px -14px rgba(12,27,21,.14); }
+
+/* --- Ecosystem Hub Animations (15s cycle) --- */
+@keyframes spin-slow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+@keyframes pulse-status { 0%,100% { opacity:1; transform:scale(1);} 50% { opacity:.6; transform:scale(1.2);} }
+
+/* Dark image: holds, fades out, returns at end */
+@keyframes hub-dark { 0%,28% {opacity:1;} 36%,88% {opacity:0;} 96%,100% {opacity:1;} }
+/* Light image: fades in thick, holds, fades out */
+@keyframes hub-light { 0%,32% {opacity:0;} 42%,88% {opacity:1;} 96%,100% {opacity:0;} }
+/* White wording: "vomits" out during dark phase */
+@keyframes hub-text-dark { 0% {opacity:0; transform:scale(.6);} 8%,30% {opacity:1; transform:scale(1);} 40%,100% {opacity:0; transform:scale(1.05);} }
+/* Green wording: readable during light phase */
+@keyframes hub-text-light { 0%,38% {opacity:0; transform:scale(.9);} 48%,90% {opacity:1; transform:scale(1);} 100% {opacity:0;} }
+
+.animate-spin-slow { animation: spin-slow 60s linear infinite; }
+.animate-pulse-status { animation: pulse-status 2s ease-in-out infinite; }
+.animate-hub-dark { animation: hub-dark 15s ease-in-out infinite; }
+.animate-hub-light { animation: hub-light 15s ease-in-out infinite; filter: contrast(1.45) saturate(1.6); }
+.animate-hub-text-dark { animation: hub-text-dark 15s ease-out infinite; }
+.animate-hub-text-light { animation: hub-text-light 15s ease-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-spin-slow, .animate-pulse-status, .animate-hub-dark, .animate-hub-light,
+  .animate-hub-text-dark, .animate-hub-text-light { animation: none !important; }
+  .animate-hub-light, .animate-hub-text-light { opacity: 1 !important; }
+}

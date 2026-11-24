@@ -1,9 +1,9 @@
 export const site = {
   name: "TRAKBIN",
     tagline: "Building cities not waste",
-  hero: {
-    headline: "The digital infrastructure for modern waste management.",
-    sub: "Trakbin connects properties, waste operators, businesses and waste agencies through one intelligent operational system, bringing collection, routing, field intelligence and environmental visibility into a single platform.",
+   hero: {
+    headline: "The digital infrastructure connecting waste management and urban services.",
+    sub: "Trakbin is an interconnected technology ecosystem developed to coordinate waste management, environmental services, properties, service providers and public institutions. Through a network of connected applications, operational tools and data systems, Trakbin brings customers, waste companies, field workers, property managers and government agencies into one connected infrastructure.",
   },
   mission: {
     body: "To build the digital infrastructure that makes waste management more connected, measurable, intelligent, and efficient.",

@@ -12,12 +12,12 @@ const audiences = [
     cta: "Modernize your operations", img: "/photos/a14.png", alt: "Waste operators loading collections",
   },
   {
-    href: "/properties", icon: "building", title: "For Properties",
-    detail: "Schedules, service visibility, billing and communication for your buildings.",
+    href: "/properties", icon: "building", title: "For Properties & Estates",
+    detail: "Schedules, service visibility, billing and communication for your buildings and residents.",
     cta: "Bring your property into the network", img: "/photos/a15.jpeg", alt: "Standardized property bins",
   },
   {
-    href: "/agencies-regulators", icon: "shield", title: "For Waste Agencies & Regulators",
+    href: "/agencies-regulators", icon: "shield", title: "For Agencies & Regulators",
     detail: "Geographic visibility and operational intelligence across the whole system.",
     cta: "See regulatory visibility", img: "/photos/a2.jpeg", alt: "Street-level collection activity",
   },
@@ -27,7 +27,7 @@ export function AudienceCards() {
   return (
     <Section tone="tint">
       <Container>
-        <SectionHead center eyebrow="Who it's for" title="One network, three command positions." />
+        <SectionHead center eyebrow="Who uses Trakbin" title="Specialized entry points into one network." />
         <div className="grid gap-6 md:grid-cols-3">
           {audiences.map((a, i) => (
             <motion.div
