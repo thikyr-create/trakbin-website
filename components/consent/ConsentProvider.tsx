@@ -1,10 +1,11 @@
 "use client";
 import { createContext, useContext, useEffect, useState, ReactNode } from "react";
-import { ConsentState, defaultConsent, CONSENT_STORAGE_KEY, CURRENT_CONSENT_VERSION, CURRENT_POLICY_VERSION } from "@/lib/consent";
+import { ConsentState, defaultConsent, CONSENT_STORAGE_KEY, CURRENT_CONSENT_VERSION } from "@/lib/consent";
 
 interface ConsentContextType {
   consent: ConsentState;
   hasConsented: boolean;
+  isHydrated: boolean;
   setConsent: (category: 'analytics' | 'functional' | 'marketing', value: boolean) => void;
   acceptAll: () => void;
   rejectOptional: () => void;
@@ -22,11 +23,9 @@ export function ConsentProvider({ children }: { children: ReactNode }) {
       const stored = localStorage.getItem(CONSENT_STORAGE_KEY);
       if (stored) {
         const parsed = JSON.parse(stored);
-        // Validate schema and version
         if (parsed.consentVersion === CURRENT_CONSENT_VERSION && typeof parsed.necessary === 'boolean') {
           setConsentState(parsed);
         } else {
-          // Version mismatch or corruption: reset to prompt user again
           localStorage.removeItem(CONSENT_STORAGE_KEY);
         }
       }
@@ -43,37 +42,15 @@ export function ConsentProvider({ children }: { children: ReactNode }) {
   };
 
   const setConsent = (category: 'analytics' | 'functional' | 'marketing', value: boolean) => {
-    const newState: ConsentState = {
-      ...consent,
-      [category]: value,
-      choice: 'customized',
-      timestamp: new Date().toISOString(),
-    };
-    saveConsent(newState);
+    saveConsent({ ...consent, [category]: value, choice: 'customized', timestamp: new Date().toISOString() });
   };
 
   const acceptAll = () => {
-    const newState: ConsentState = {
-      ...defaultConsent,
-      analytics: true,
-      functional: true,
-      marketing: true,
-      choice: 'accepted',
-      timestamp: new Date().toISOString(),
-    };
-    saveConsent(newState);
+    saveConsent({ ...defaultConsent, analytics: true, functional: true, marketing: true, choice: 'accepted', timestamp: new Date().toISOString() });
   };
 
   const rejectOptional = () => {
-    const newState: ConsentState = {
-      ...defaultConsent,
-      analytics: false,
-      functional: false,
-      marketing: false,
-      choice: 'rejected',
-      timestamp: new Date().toISOString(),
-    };
-    saveConsent(newState);
+    saveConsent({ ...defaultConsent, analytics: false, functional: false, marketing: false, choice: 'rejected', timestamp: new Date().toISOString() });
   };
 
   const resetConsent = () => {
@@ -81,11 +58,9 @@ export function ConsentProvider({ children }: { children: ReactNode }) {
     setConsentState(defaultConsent);
   };
 
-  // Prevent hydration mismatch by rendering nothing until client-side state is loaded
-  if (!isHydrated) return null;
-
+  // Always render children so server HTML is never blank (SEO + no-JS).
   return (
-    <ConsentContext.Provider value={{ consent, hasConsented: consent.choice !== null, setConsent, acceptAll, rejectOptional, resetConsent }}>
+    <ConsentContext.Provider value={{ consent, hasConsented: consent.choice !== null, isHydrated, setConsent, acceptAll, rejectOptional, resetConsent }}>
       {children}
     </ConsentContext.Provider>
   );

@@ -4,10 +4,10 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export function AnalyticsTracker() {
-  const { consent } = useConsent();
+  const { consent, isHydrated } = useConsent();
   
   // STRICT ENFORCEMENT: Do not initialize tracking without consent
-  if (!consent.analytics) return null;
+  if (!isHydrated || !consent.analytics) return null;
 
   return (
     <>

@@ -17,7 +17,7 @@ export function LivingSystem() {
       <Container>
         <SectionHead center eyebrow="The living system"
           title="Waste is an inherent part of human existence."
-          lead="Whatever humans create, sooner or later becomes waste. There is something compelling about building a company around a problem most people try not to think about. Very few people wake up excited about garbage. Every city, no matter how wealthy or advanced, depends on waste being removed efficiently." />
+          lead="Whatever humans create, sooner or later becomes waste. a problem most people try not to think about. Very few people wake up excited about garbage. Every city, no matter how wealthy or advanced, depends on waste being removed efficiently." />
         <ImageCrossfade frames={frames} className="aspect-[16/9] rounded-2xl border border-line card-shadow sm:aspect-[21/9]" />
       </Container>
     </Section>

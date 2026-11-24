@@ -1,42 +1,32 @@
 "use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Container, Section, SectionHead } from "@/components/shared/Section";
+import { Container, Section } from "@/components/shared/Section";
 import { Icon } from "@/components/shared/Icon";
 import { EASE } from "@/components/shared/Reveal";
 
 const audiences = [
-  {
-    href: "/waste-operators", icon: "truck", title: "For Waste Operators",
+  { href: "/waste-operators", icon: "truck", title: "For Waste Operators",
     detail: "Run fleets, crews, zones, dispatch and billing as one live system.",
-    cta: "Modernize your operations", img: "/photos/a14.png", alt: "Waste operators loading collections",
-  },
-  {
-    href: "/properties", icon: "building", title: "For Properties & Estates",
+    cta: "Modernize your operations", img: "/photos/a14.png", alt: "Waste operators loading collections" },
+  { href: "/properties", icon: "building", title: "For Properties & Estates",
     detail: "Schedules, service visibility, billing and communication for your buildings and residents.",
-    cta: "Bring your property into the network", img: "/photos/a15.jpeg", alt: "Standardized property bins",
-  },
-  {
-    href: "/agencies-regulators", icon: "shield", title: "For Agencies & Regulators",
+    cta: "Bring your property into the network", img: "/photos/a15.jpeg", alt: "Standardized property bins" },
+  { href: "/agencies-regulators", icon: "shield", title: "For Agencies & Regulators",
     detail: "Geographic visibility and operational intelligence across the whole system.",
-    cta: "See regulatory visibility", img: "/photos/a2.jpeg", alt: "Street-level collection activity",
-  },
+    cta: "See regulatory visibility", img: "/photos/a2.jpeg", alt: "Street-level collection activity" },
 ];
 
 export function AudienceCards() {
   return (
     <Section tone="tint">
       <Container>
-        <SectionHead center eyebrow="Who uses Trakbin" title="Specialized entry points into one network." />
         <div className="grid gap-6 md:grid-cols-3">
           {audiences.map((a, i) => (
-            <motion.div
-              key={a.href}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+            <motion.div key={a.href}
+              initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.5, delay: i * 0.1, ease: EASE }}
-            >
+              transition={{ duration: 0.5, delay: i * 0.1, ease: EASE }}>
               <Link href={a.href}
                 className="group relative flex aspect-[4/5] flex-col justify-end overflow-hidden rounded-2xl border border-line card-shadow">
                 <img src={a.img} alt={a.alt} loading="lazy"

@@ -6,10 +6,10 @@ import { useConsent } from "./ConsentProvider";
 import { ConsentPreferencesModal } from "./ConsentPreferencesModal";
 
 export function CookieBanner() {
-  const { hasConsented, acceptAll, rejectOptional } = useConsent();
+  const { hasConsented, isHydrated , acceptAll, rejectOptional } = useConsent();
   const [showPreferences, setShowPreferences] = useState(false);
 
-  if (hasConsented) return null;
+  if (!isHydrated || hasConsented) return null;
 
   return (
     <>

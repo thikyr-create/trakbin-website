@@ -1,4 +1,4 @@
-import { Container, Section, SectionHead } from "@/components/shared/Section";
+import { Container, Section } from "@/components/shared/Section";
 
 const T = "16s";
 
@@ -28,9 +28,7 @@ export function CollectionStory() {
   return (
     <Section className="bg-paper overflow-hidden">
       <Container>
-        <SectionHead center eyebrow="The collection loop" title="Every bag, tracked end to end."
-          lead="From a resident's doorstep to the disposal site, each step is coordinated and recorded in one connected system." />
-        <div className="mt-10 overflow-hidden rounded-2xl border border-line bg-card card-shadow">
+        <div className="overflow-hidden rounded-2xl border border-line bg-card card-shadow">
           <style>{css}</style>
           <svg className="cs-scene block w-full h-auto" viewBox="0 0 1200 420" role="img" aria-label="Animated waste collection journey">
             {/* sky + ground */}

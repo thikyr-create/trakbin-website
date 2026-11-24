@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Container, Section, SectionHead } from "@/components/shared/Section";
+import { Container, Section } from "@/components/shared/Section";
 import { Icon } from "@/components/shared/Icon";
 import { EASE } from "@/components/shared/Reveal";
 import { cn } from "@/lib/utils";
@@ -31,8 +31,6 @@ export function Ecosystem() {
   return (
     <Section tone="tint">
       <Container>
-        <SectionHead center eyebrow="The system" title="One connected operational network."
-          lead="Trakbin is not an app for one actor. It is infrastructure that connects every participant in the waste chain." />
         <p className="eyebrow mb-8 text-center text-ink-500">Tap each node</p>
 
         <ol className="mx-auto flex max-w-xl flex-col">
