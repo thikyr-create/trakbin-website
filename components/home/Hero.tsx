@@ -34,6 +34,10 @@ export function Hero() {
           <span className="h-px w-10 bg-brand-300/70 sm:w-14" />
         </div>
 
+        <h2 className="mt-14 max-w-3xl font-display text-2xl font-bold text-white sm:text-3xl">
+          The digital infrastructure for modern waste management.
+        </h2>
+
         <p className="mt-10 font-mono text-sm font-semibold uppercase tracking-[.2em] text-brand-300">
           One ecosystem. Connected operations. Better-managed communities.
         </p>
